@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Dictionary",
+    "version": "0.1",
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "permissions": [
+      "contextMenus"
+     ],
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_title": "Lookup a meaning!!"
+    },
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js; object-src 'self'"
+  }
